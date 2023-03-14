@@ -2,8 +2,8 @@ import { NextRequest, NextResponse } from "next/server";
 import { verifyToken } from "./utils/indext";
 
 export const middleware = async (req: NextRequest) => {
-  const token = req.cookies.get('token') || '';
-  const userId = await verifyToken(token as string);
+  const token = req.cookies.get('token');
+  const userId = await verifyToken(token?.value || '');
   const { pathname } = req.nextUrl;
 
   if (
