@@ -1,0 +1,10 @@
+export type TYoutubeVideo = 'channel' | 'playlist' | 'video';
+
+export enum ErrorCodesService {
+  GENERAL_ERROR = 'GENERAL_ERROR',
+  NO_QUERY_PARAMS = 'NO_QUERY_PARAMS',
+  WRONG_HTTP_METHOD = 'WRONG_HTTP_METHOD',
+  MISSING_SOME_REQ_BODY = 'MISSING_SOME_REQ_BODY',
+  RESOURCE_NOT_FOUND = 'RESOURCE_NOT_FOUND',
+  UNAUTHORIZED = 'UNAUTHORIZED'
+}
